@@ -22,7 +22,7 @@ public class Lembrete {
 	
 	@Column(name = "data")
 	@Temporal(TemporalType.TIMESTAMP)
-	private Date data;
+	private Date data = new Date();
 	
 	public Date getData() {
 		return data;
@@ -36,10 +36,6 @@ public class Lembrete {
 		return id;
 	}
 	
-	public void setId(Integer id){
-		this.id = id;
-	}
-	
 	public String getDescricao() {
 		return descricao;
 	}
@@ -47,11 +43,5 @@ public class Lembrete {
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
-	
-	@Override
-	public String toString() {
-		return "Lembrete [id=" + id + ", descricao=" + descricao + "]";
-	}
-	
 
 }
